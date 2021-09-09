@@ -24,7 +24,8 @@ while(i == 0){
 <!DOCTYPE html>
 <html>
     <head>
-    	<!-- Comentario que eu não falei com  -->
+    	<!-- Comentario que eu nÃ£o falei  -->
+	<!-- Comentario que eu nÃ£o falei teste  -->
         <title>Cadastro Produtos</title>
         <meta charset="utf-8">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -54,11 +55,11 @@ while(i == 0){
                     <label class="form-label">Tipo do produto</label><br>
                     <select name="tipo" class="form-select">
                         <option selected>Tipo</option>
-                        <option value="cosmeticop">Cosmético pago</option>
-                        <option value="cosmeticof">Cosmético gratuito</option>
+                        <option value="cosmeticop">CosmÃ©tico pago</option>
+                        <option value="cosmeticof">CosmÃ©tico gratuito</option>
                         <option value="gema">Gema/Runa</option>
                         <option value="trilha">Trilha sonora</option>
-                        <option value="consumivel">Consumível</option>
+                        <option value="consumivel">ConsumÃ­vel</option>
                         <option value="arma">Arma</option>
                         <option value="equipamento">Equipamento</option>
                         <option value="diverso">Diverso</option>
@@ -79,14 +80,14 @@ while(i == 0){
                     <label class="form-label">Imagem do produto</label><br>
                     <input type="file" class="form-control" name="imagem">
                 </div>
-                <label class="form-label">Preço</label><br> 
+                <label class="form-label">PreÃ§o</label><br> 
                 <div class="input-group mb-3">
                     <span class="input-group-text">R$ 0.00</span>
                     <input type="text" class="form-control" name="preco">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Descrição</label>
-                    <textarea placeholder="Uma descrição breve do seu produto" class="form-control" rows="2" name="descricao"></textarea>
+                    <label class="form-label">DescriÃ§Ã£o</label>
+                    <textarea placeholder="Uma descriÃ§Ã£o breve do seu produto" class="form-control" rows="2" name="descricao"></textarea>
                 </div>
                    
                     <select name="codProduto" Style="visibility: hidden">
