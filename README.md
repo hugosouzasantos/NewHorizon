@@ -1,2 +1,2 @@
 # NewHorizon
-Trabalho de Programação na Web de alunos do CEFETMG.
+Trabalho de Programação na Web de alunos do CEFETMG!
