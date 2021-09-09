@@ -84,7 +84,7 @@ public class dadosvendedor extends HttpServlet {
 				+ "				<td>"+ rg +"</td>\r\n"
 				+ "			</tr>\r\n"
 				+ "			<tr>\r\n"
-				+ "				<td>Endereço</td>\r\n"
+				+ "				<td>Endereï¿½o</td>\r\n"
 				+ "				<td>"+ endereco +"</td>\r\n"
 				+ "			</tr>\r\n"
 				+ "			<tr>\r\n"
