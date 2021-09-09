@@ -1,3 +1,3 @@
 # NewHorizon
-Nosso projeto to cefet
-Mt legal.
+Nosso projeto para o cefet PWII
+Mt legal. Massa
