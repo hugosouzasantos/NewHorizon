@@ -32,7 +32,7 @@ public class UploadService {
 				diretorioUpload.mkdir();
 			}
 		}
-		return false;
+		return true;
 		
 	}
 	
