@@ -1,7 +1,6 @@
 package Classes;
 
 public class Produto {
-	
 	private String nome, plataforma, jogo, tipo, raridade, imagem, descricao, codProduto;
 	private int  quantidade;
 	private float preco;

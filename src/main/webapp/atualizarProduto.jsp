@@ -17,7 +17,7 @@ if (produto != null) {
 
 <!DOCTYPE html>
 <html>
-<head>
+<head></head>
 <title>Atualizar Produto</title>
 <meta charset="utf-8">
 <link
