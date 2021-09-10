@@ -85,7 +85,7 @@ while(i == 0){
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Descrição</label>
-                    <textarea placeholder="Uma descriÃ§Ã£o breve do seu produto" class="form-control" rows="2" name="descricao"></textarea>
+                    <textarea placeholder="Uma descrição breve do seu produto" class="form-control" rows="2" name="descricao"></textarea>
                 </div>
                    
                     <select name="codProduto" Style="visibility: hidden">
