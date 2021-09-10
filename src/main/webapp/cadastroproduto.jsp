@@ -53,11 +53,11 @@ while(i == 0){
                     <label class="form-label">Tipo do produto</label><br>
                     <select name="tipo" class="form-select">
                         <option selected>Tipo</option>
-                        <option value="cosmeticop">CosmÃ©tico pago</option>
-                        <option value="cosmeticof">CosmÃ©tico gratuito</option>
+                        <option value="cosmeticop">Cosmético pago</option>
+                        <option value="cosmeticof">Cosmético gratuito</option>
                         <option value="gema">Gema/Runa</option>
                         <option value="trilha">Trilha sonora</option>
-                        <option value="consumivel">ConsumÃ­vel</option>
+                        <option value="consumivel">Consumível</option>
                         <option value="arma">Arma</option>
                         <option value="equipamento">Equipamento</option>
                         <option value="diverso">Diverso</option>
@@ -71,20 +71,20 @@ while(i == 0){
                         <option value="incomum">Incomum</option>
                         <option value="raro">Raro</option>
                         <option value="mraro">Muito raro</option>
-                        <option value="exotico">Exotico</option>
+                        <option value="exotico">Exótico</option>
                     </select>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Imagem do produto</label><br>
                     <input type="file" class="form-control" name="imagem">
                 </div>
-                <label class="form-label">PreÃ§o</label><br> 
+                <label class="form-label">Preço</label><br> 
                 <div class="input-group mb-3">
                     <span class="input-group-text">R$ 0.00</span>
                     <input type="text" class="form-control" name="preco">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">DescriÃ§Ã£o</label>
+                    <label class="form-label">Descrição</label>
                     <textarea placeholder="Uma descriÃ§Ã£o breve do seu produto" class="form-control" rows="2" name="descricao"></textarea>
                 </div>
                    
@@ -97,7 +97,7 @@ while(i == 0){
                 
             </form>
         </div>
-                    <div style=" text-align: center; padding-bottom: 3%"><a href="gerenciarProdutos.jsp"><button type="button" class="btn btn-outline-primary">Pagina inicial</button></a></div>
+                    <div style=" text-align: center; padding-bottom: 3%"><a href="gerenciarProdutos.jsp"><button type="button" class="btn btn-outline-primary">Página inicial</button></a></div>
         
     </body>
 </html>
