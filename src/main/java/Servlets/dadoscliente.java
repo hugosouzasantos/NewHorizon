@@ -26,6 +26,7 @@ public class dadoscliente extends HttpServlet {
 		String datanascimento = request.getParameter("dtn");
 		String cpf = request.getParameter("cpf");
 		String senha = request.getParameter("senha");
+		String imagem = request.getParameter("imagem");
 		
 		PrintWriter out = response.getWriter();
 		

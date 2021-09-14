@@ -28,7 +28,6 @@ Produto produto = banco.buscarProdutoPorCodigo(codProduto);
 	crossorigin="anonymous">
 
 <title>Descrição Produto</title>
-<link rel="stylesheet" href="css.css" />
 </head>
 <body>
 
