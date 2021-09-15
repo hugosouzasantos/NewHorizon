@@ -5,27 +5,45 @@
 
 
 <%
-String nome = upload.getParameter(request, "nome");
-String sobreNome = upload.getParameter(request, "nomesobre");
-String email = upload.getParameter(request, "email");
-String tel = upload.getParameter(request, "tel");
-String dtn = upload.getParameter(request, "dtn");
-String cpf = upload.getParameter(request, "cpf");
-String senha = upload.getParameter(request, "senha");
-String imagem = upload.getParameter(request, "imagem");
+UploadFile upload = new UploadFile("arquivo", 1, "jpg, jpeg, png, gif");
 
-Clientes cliente = new Clientes(nome, sobreNome, email, tel, cpf, dtn, senha, imagem);
+//Necessário apenas se você estiver tendo problema com acentos
+upload.setEncoding("UTF-8");
 
-UploadFile arquivoImagem = new UploadFile("arquivo");
+//Obtendo os parâmetros que foram enviados pelo formulário utilizando o método getParameter definido na classe UploadSeguroService
+//Nesse método, precisamos passar o request como primeiro parâmetro e o nome do campo do formulário como segundo parâmetro
+String nome = upload.getParameter(request,"nome");
+String sobreNome = upload.getParameter(request,"nomesobre");
+String email = upload.getParameter(request,"email");
+String tel = upload.getParameter(request,"tel");
+String dtn = upload.getParameter(request,"dtn");
+String cpf = upload.getParameter(request,"cpf");
+String senha = upload.getParameter(request,"senha");
 
-%>
-<%if(arquivoImagem.doUpload(request, application)){
+String nomeimg = null; // Variável que vai guardar o nome do arquivo da imagem da capa do livro (se der erro seu valor vai ser nulo)
+
+
+//Fazendo o upload do arquivo que veio no campo "capa". Se o upload der errado, apenas exibo uma mensagem de erro, mas salvo os dados do livro normalmente e deixo o nome do arquivo nulo
+if(upload.doUploadParameter(request, application, "imagem")){
+	// O upload deu certo, então apenas pego o nome do arquivo para salvar no objeto livro
+	nomeimg = upload.getNomeArquivo();
+} else { // Caso tenha ocorrido algum problema no upload
+	// Verifica se existe alguma mensagem de erro para exibir
+	if(upload.getErro() != null){
+		out.println("<p style='color: red;'>Erro no upload: " + upload.getErro() + "</p>");	
+	}
+} 
+
+Clientes cliente = new Clientes(nome, sobreNome, email, tel, cpf, dtn, senha, nomeimg);
+
+
+if(cliente.getNomeFile() != null){
 
 %>
 <!DOCTYPE html>
 <html>
 <head>
-<!-- Required meta tags -->
+<!-- Required meta tags -->	
 <meta charset="utf-8">
 <meta name="viewport" content="wid  th=device-width, initial-scale=1">
 
@@ -80,7 +98,7 @@ UploadFile arquivoImagem = new UploadFile("arquivo");
 		</tr>
 		<tr>
 			<th><label for="imagem">Imagem:</label></th>
-			<td><img src="<%=arquivoImagem.getNomeArquivo()%>"></td>
+			<td style="width: 100px; height:100px;"><img src="<%=cliente.getNomeFile()%>"></td>
 		</tr>
 		<tr>
 			<th><label for="senha">Senha:</label></th>
@@ -109,7 +127,6 @@ else{%>
 		crossorigin="anonymous">
 
 	<title>Remover Produto</title>
-	<link rel="stylesheet" href="css.css" />
 	</head>
 
 	<body style="background-color: #3d3d3d;">
