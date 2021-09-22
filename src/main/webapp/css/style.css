@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;400;800&display=swap');
+
 html, body{
     margin: 0px;
 }
@@ -6,9 +8,12 @@ body{
     background: rgb(102,102,102);
     background: linear-gradient(350deg, rgb(58, 58, 58) 33%, rgba(105,209,206,1) 100%);
     min-height: 100vh;
+    word-wrap: break-word;
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
 }   
 
-header{ 
+nav{ 
     width: 70%;
     text-align: left;
     padding: 40px;
@@ -50,68 +55,86 @@ div#container{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding-top: 30px;
 }
 
-div#form{
-    width: 480px;
+div#body{
+    width: 350px;
     padding: 10px;
     padding-left: 35px;
-    padding-right: 35px;
-    padding-top: 0px;   
+    padding-right: 35px;  
     border: 4px solid #000;
-    border-radius: 15px;
-    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+div#divHeader{
+	display: flex;
+	flex-direction: column;
+ 	align-items: flex-start;
+}
+
+h2#headerDiv{
+	padding: 8px;
+    font-size: 22px;
+    margin-top: -32px;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
 }
 
 div.input{
+    margin-bottom: 25px;
     display: grid;
-    margin-bottom: 10px;
 }
 
-h2#headerForm{
-    font-size: 28px;
-    padding: 10px;
-    text-align: center;
-    margin-top: -25px;
-    border-radius: 15px;
-    margin-bottom: 10px;
-    background-color: #000;
-    color: #fff;
-    width: 250px;
+fieldset{
+	padding: 0px;
+	margin: 0px;
+	border: none;
+	display: block ruby;
+	margin-bottom: 25px;
 }
+
 
 label{
     color: #fff;
     font-size: 17px;
-    margin-left: 15px;
 }
 
 input{
     width: calc((480 - 70) - 17px);
     height: 25px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border: 1px solid black;
-    border-radius: 15px;
+    border: none;
+    background: none;
     font-size: 13px;
-    padding-left: 15px;
     color: #000;
-    margin-top: 5px;
+    border-bottom: 1px solid #ddd;
+    outline: none;
+}
+
+.divNoEso{
+	width: 150px;
+}
+
+div#espaço, input#espaço{
+	margin-left: 37px;
 }
 
 input::placeholder {
-    color: #000;
+    color: #fff;
+    font-family: 'Karla', sans-serif;
 }
 
 select {
     width: calc((480 - 70) - 17px);
     height: 30px;
-    background: rgb(88, 88, 88);
-    border: 1px solid black;
-    border-radius: 15px;
+    background: none;
+    border: 2px solid black;
+    border-radius: 5px;
     font-size: 13px;
-    padding-left: 15px;
     color: #000;
-    margin-top: -8px;
+    border: none;
 }
 
 div#subDiv{
@@ -120,14 +143,20 @@ div#subDiv{
     margin-bottom: -31px;
 }
 
+div#codPro{
+	visibility: hidden;
+	height: 0px;
+}
+
 input#submit{
-    height: 39px;
-    padding: 5px;
+    height: 30px;
+    padding: 3px;
     background-color: #69d1ce;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 15px;
     border: 4px solid #000;
     text-align: center;
+    border-radius: 5px;
 }
 
 input#submit:hover{
@@ -136,7 +165,4 @@ input#submit:hover{
 
 footer{
     text-align: center;
-    margin-top: 40px;
-    padding: 3px;
-    height: 20px;
 }

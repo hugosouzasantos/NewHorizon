@@ -20,38 +20,38 @@ while(i == 0){
     <head>
         <title>Cadastro Produtos</title>
         <meta charset="utf-8">
-        
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
-        <header>
-            <a id="pagPrin"  href="index.html"> NewHorizon </a>
+        <nav>
+            <a id="pagPrin"  href="index.html"> New Horizon </a>
             <div id="linksHe">
                 <a class="pagSec" href="cadastroproduto.jsp"> Cadastrar produto </a>
                 <a class="pagSec" href="#"> Login </a>
                 <a class="pagSec" href="cadastrocliente.jsp"> Criar conta </a>
             </div>
-        </header>
+        </nav>
         <div id="container">
-            <div id="form">
+            <div id="body">
+            	<div id="divHeader">
+                	<h2 id="headerDiv"> Cadastro Produto </h2>
+                </div>
                 <form method="post" action="dadosproduto.jsp">
                     <div class="input">
-                        <label>Nome do produto</label>
-                        <input type="text" class="form-control" name="nome" placeholder="Digite nome do produto...">
+                        <input type="text" name="nome" placeholder="Nome do produto">
                     </div>
                     <div class="input">
-                        <label>Quantidade</label>
-                        <input type="number" class="form-control" name="quantidade" placeholder="Digite quantidade do produto...">
+                        <input type="number" name="quantidade" placeholder="Quantidade do produto">
                     </div>
                     <div class="input">
-                        <label>Plataforma</label>
-                        <input type="text" class="form-control" name="plataforma" placeholder="Digite a plataforma...">
+                        <input type="text" name="plataforma" placeholder="Plataforma...">
                     </div>
                     <div class="input">
-                        <label>Jogo</label>
-                        <input type="text" class="form-control" name="jogo" placeholder="Digite o jogo...">
+                        <input type="text" name="jogo" placeholder="Jogo...">
                     </div>
-                    <div class="input">
-                        <label>Tipo do produto</label><br>
+                    <fieldset>
+                    <div class="divNoEso">
+                        <label>Tipo do produto</label>
                         <select name="tipo">
                             <option selected>Tipo</option>
                             <option value="cosmeticop">Cosmético pago</option>
@@ -64,8 +64,8 @@ while(i == 0){
                             <option value="diverso">Diverso</option>
                         </select>
                     </div>
-                    <div class="input">
-                        <label>Raridade</label><br>
+                    <div class="divNoEso" id="espa�o">
+                        <label>Raridade</label>
                         <select name="raridade">
                             <option selected>Raridade</option>
                             <option value="comum">Comum</option>
@@ -75,31 +75,29 @@ while(i == 0){
                             <option value="exotico">Exótico</option>
                         </select>
                     </div>
+                    </fieldset>
                     <div class="input">
-                        <label>Imagem do produto</label><br>
-                        <input type="file" class="form-control" name="imagem" placeholder="Imagem do produto...">
+                        <label>Imagem do produto</label>
+                        <input type="file" name="imagem" placeholder="Imagem do produto">
                     </div>
-                    <label>Preço</label><br> 
-                    <div class="input-group mb-3">
+                    <div class="input">
                         <span class="input-group-text">R$ 0.00</span>
-                        <input type="text" class="form-control" name="preco" placeholder="Digite o preço...">
+                        <input type="text" name="preco" placeholder="Pre�o">
                     </div>
                     <div class="input">
-                        <label>Descrição</label>
-                        <textarea placeholder="Uma descrição breve do seu produto..." class="form-control" rows="2" name="descricao"></textarea>
+                        <textarea placeholder="Descri��o" rows="2" name="descricao"></textarea>
                     </div>
-                        <select name="codProduto" Style="visibility: hidden">
+                    <div id="codPro">
+                        <select name="codProduto">
                             <option selected value="<%=codigo%>"><%=codigo%></option>
                         </select>
+                    </div>
                     <div id="subDiv" class="input">
-                        <input type="submit" value="Cadastrar">
+                        <input id="submit" type="submit" value="Cadastrar">
                     </div>
                 </form>
             </div>
         </div>
-    <div>
-        <a href="gerenciarProdutos.jsp"><button type="button" class="btn btn-outline-primary">Página inicial</button></a>
-    </div>
     <footer>
         <h4> Trabalho PWII</h4>
     </footer>    
