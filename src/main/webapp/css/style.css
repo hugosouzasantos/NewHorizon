@@ -6,7 +6,7 @@ html, body{
 
 body{
     background: rgb(102,102,102);
-    background: linear-gradient(350deg, rgb(58, 58, 58) 33%, rgba(105,209,206,1) 100%);
+    background: linear-gradient(350deg, rgb(21, 21, 21) 33%, rgba(255,183,26,1) 100%);
     min-height: 100vh;
     word-wrap: break-word;
     font-family: 'Karla', sans-serif;
@@ -30,7 +30,7 @@ a{
 
 a#pagPrin{
     width: 535px;
-    color: #fff;
+    color: #000;
     font-size: 50px;
     font-weight: bold;
 }
@@ -47,6 +47,7 @@ a.pagSec{
     margin-left: 30px;
     float: right;
     text-align: center;
+    color: #fff;
 }
 
 div#container{
