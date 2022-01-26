@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;400;800&display=swap');
+
+/* #ff5f00 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+    font-family: 'Karla', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    font-size: 100%;
+    background: rgb(27,27,27);
+    background: linear-gradient(169deg, rgba(27,27,27,1) 22%, rgb(49, 49, 49) 76%);   
+    background-repeat: no-repeat;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+.header-logo {
+    font-size: 45px;
+    font-weight: bold;
+    color: #df3800;
+}
+
+.header-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.header-nav-item {
+    font-size: 12px;
+    color: white;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-left: calc(50% - 173px);
+    padding-right: calc(50% - 173px);
+}
+
+.main-form {
+    background: rgb(43, 40, 39);
+    background: linear-gradient(0deg, rgb(43, 40, 39) 78%, rgba(223,56,0,1) 93%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 21px;
+    box-shadow: 1px 1px 8px black;
+}
+
+.main-escrito-titulo {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    padding-bottom: 43px;
+}
+
+.main-form-divinput-junto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main-form-div-labinp {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-form-label {
+    font-size: 11px;
+    padding-bottom: 2px;
+    padding-left: 1px;
+    color: rgb(211, 211, 211);
+}
+
+.main-form-input {
+    background: none;
+    color: white;
+    font-size: 12px;
+    height: 26px;
+    padding: 4px;
+    width: 100%;
+    outline: none;
+    border: 1px solid black;
+}
+
+#select {
+    background-color: rgb(43, 40, 39);
+    color: white;
+}
+
+option {
+    color: white;
+}
+
+.main-form-divsubit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.main-form-submit {
+    font-weight: bold;
+    color: black;
+    background-color: #df3800;
+    height: 35px;
+    border: none;
+    font-size: 14px;
+}
+
+.main-form-submit:hover {
+    background-color: #df3800ab;
+}   
+
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    padding-top: 30px;;
+}
+
+.footer-escrito {
+    font-weight: 400;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px rgb(65, 65, 65) inset; 
+}
+

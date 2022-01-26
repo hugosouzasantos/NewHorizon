@@ -1,0 +1,52 @@
+<div class="input">
+                    <input type="text" name="nome" placeholder="Seu nome" required>
+                </div>
+
+                <div class="input">
+                    <input type="text" name="nomesobre"  placeholder="Seu sobrenome" required>
+                </div>
+
+                <div class="input">
+                    <input type="text" placeholder="Seu e-mail" name="email" required>
+                </div>
+                    
+                <div class="input">
+                    <input type="text" name="tel"  placeholder="Seu telefone" required>    
+                </div>
+                    
+                <div class="input">
+                    <label>Data de nascimento</label>
+                    <input type="date" name="dtn" required>
+                </div>
+                    
+                <div class="input">
+                    <input type="text" name="end" placeholder="Seu endereço" required>    
+                </div>
+                    
+                <div class="input">
+                    <input type="text" placeholder="Seu RG" name="rg" required>    
+                </div>
+                    
+                <div class="input">
+                    <input type="text" placeholder="Seu CPF" name="cpf" required>    
+                </div>
+                    
+                <div class="input">
+                    <input type="password" name="senha" placeholder="Sua senha" required>
+                </div>
+                    
+                <div class="input">
+                    <label class="sel" >Plataforma Principal de vendas</label><br>
+                    <select name="plataforma" required>
+                        <option selected>Plataforma</option>
+                        <option value="steam">Steam</option>
+                        <option value="epic">Epic Games</option>
+                        <option value="origin">Origin</option>
+                        <option value="microsoftStore">Microsoft Store</option>
+                        <option value="battleNet">Battle Net</option>
+                    </select>
+                </div>
+                    
+                <div id="subDiv" class="input">
+                    <input id="submit" type="submit" value="Cadastrar">
+                </div>

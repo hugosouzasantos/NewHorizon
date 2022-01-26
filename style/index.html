@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <title> Cadastro Vendedor </title>
+    </head>
+    <body>
+        <header class="header"> 
+            <a class="header-logo" href="index.html"> New Horizon </a>
+            <nav class="header-nav">
+                <a class="header-nav-item" href="#"> Cadastrar produto </a>
+                <a class="header-nav-item" href="#"> Login </a>
+                <a class="header-nav-item" href="#"> Criar conta </a>
+            </nav>
+        </header>
+
+        <main class="main">
+
+            <form class="main-form" method="post" action="dadosvendedor.jsp">
+
+                <div class="main-escrito">
+                    <h2 class="main-escrito-titulo"> Cadastro Vendedor </h2>
+                </div>
+
+                <div class="main-form-divinput-junto">
+                    <div class="main-form-div-labinp">
+                        <label class="main-form-label" >Nome</label>
+                        <input class="main-form-input" type="text" name="nome" placeholder="Seu nome" required> 
+                    </div>
+                    <div class="main-form-div-labinp">
+                        <label class="main-form-label" >Sobrenome</label>
+                        <input class="main-form-input" type="text" name="nomesobre"  placeholder="Seu sobrenome" required>
+                    </div>
+                </div>
+
+                <div class="main-form-div-labinp">
+                    <label class="main-form-label" >E-mail</label>
+                    <input class="main-form-input" type="text" placeholder="Seu e-mail" name="email" required>
+                </div>
+
+                <div class="main-form-divinput-junto">
+                    <div class="main-form-div-labinp">
+                        <label class="main-form-label" >Telefone</label>
+                        <input class="main-form-input" type="text" name="tel"  placeholder="Seu telefone" required>    
+                    </div>
+                    <div class="main-form-div-labinp">
+                        <label class="main-form-label">Data de nascimento</label>
+                        <input class="main-form-input" type="date" name="dtn" required>
+                    </div>
+                </div>
+
+                <div class="main-form-divinput-junto">   
+                    <div class="main-form-div-labinp">
+                        <label class="main-form-label"> CPF </label>
+                        <input class="main-form-input" type="text" id="cpf" maxlength="14" placeholder="Seu CPF" name="cpf" required>    
+                    </div>
+
+                    <div class="main-form-div-labinp">
+                        <label class="main-form-label"> RG </label>
+                        <input class="main-form-input" type="text" placeholder="Seu RG" name="rg" required>
+                    </div> 
+                </div>
+
+                <div class="main-form-div-labinp">
+                    <label class="main-form-label"> Endereço </label>
+                    <input class="main-form-input" type="text" name="end" placeholder="Seu endereço" required>     
+                </div>
+
+                <div class="main-form-div-labinp">
+                    <label class="main-form-label"> Plataforma Principal de vendas </label>
+                    <select class="main-form-input" id="select"  name="plataforma">
+                        <option disabled selected> Plataforma </option>
+                        <option value="steam"> Steam </option>
+                        <option value="epic"> Epic Games </option>
+                        <option value="origin"> Origin </option>
+                        <option value="microsoftStore"> Microsoft Store </option>
+                        <option value="battleNet"> Battle Net </option>
+                    </select>
+
+                </div>
+
+                <div class="main-form-div-labinp">
+                    <label class="main-form-label" >Senha</label>
+                    <input class="main-form-input" type="password" name="senha" placeholder="Sua senha" required>
+                </div>    
+                
+                <div class="main-form-divsubit">
+                    <input class="main-form-submit" id="submit" type="submit" value="Cadastrar">
+                </div>    
+
+            </form>
+        </main>
+        <footer class="footer">
+            <h4 class="footer-escrito"> Trabalho PWII </h4>
+        </footer>
+    </body>
+</html>

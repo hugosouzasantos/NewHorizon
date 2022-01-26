@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;400;800&display=swap');
+
+html, body{
+    margin: 0px;
+}
+
+body{
+    background: rgb(102,102,102);
+    background: linear-gradient(350deg, rgb(21, 21, 21) 33%, rgba(255,183,26,1) 100%);
+    min-height: 100vh;
+    word-wrap: break-word;
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+}   
+
+nav{ 
+    width: 70%;
+    text-align: left;
+    padding: 40px;
+    padding-left: 15%;
+    padding-right: 15%;
+    display: inline-flex;
+    position:relative;
+}
+
+a{
+    text-decoration: none;
+    color: black;   
+}
+
+a#pagPrin{
+    width: 535px;
+    color: #000;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+div#linksHe{
+    display: inherit;
+    width: 321px;
+    position:absolute;
+    bottom: 50px;
+    right: 15%;
+}
+
+a.pagSec{
+    margin-left: 30px;
+    float: right;
+    text-align: center;
+    color: #fff;
+}
+
+div#container{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+div#body{
+    width: 350px;
+    padding: 10px;
+    padding-left: 35px;
+    padding-right: 35px;  
+    border: 4px solid #000;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+div#divHeader{
+	display: flex;
+	flex-direction: column;
+ 	align-items: flex-start;
+}
+
+h2#headerDiv{
+	padding: 8px;
+    font-size: 22px;
+    margin-top: -32px;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+}
+
+div.input{
+    margin-bottom: 25px;
+    display: grid;
+}
+
+fieldset{
+	padding: 0px;
+	margin: 0px;
+	border: none;
+	display: block ruby;
+	margin-bottom: 25px;
+}
+
+
+label{
+    color: #fff;
+    font-size: 17px;
+}
+
+input{
+    width: calc((480 - 70) - 17px);
+    height: 25px;
+    border: none;
+    background: none;
+    font-size: 13px;
+    color: #000;
+    border-bottom: 1px solid #ddd;
+    outline: none;
+}
+
+.divNoEso{
+	width: 150px;
+}
+
+div#espaço, input#espaço{
+	margin-left: 37px;
+}
+
+input::placeholder {
+    color: #fff;
+    font-family: 'Karla', sans-serif;
+}
+
+select {
+    width: calc((480 - 70) - 17px);
+    height: 30px;
+    background: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+    border: none;
+}
+
+div#subDiv{
+    margin-top: 2px;
+    float: right;
+    margin-bottom: -31px;
+}
+
+div#codPro{
+	visibility: hidden;
+	height: 0px;
+}
+
+input#submit{
+    height: 30px;
+    padding: 3px;
+    background-color: #69d1ce;
+    font-weight: bold;
+    font-size: 15px;
+    border: 4px solid #000;
+    text-align: center;
+    border-radius: 5px;
+}
+
+input#submit:hover{
+    background-color: #4c9e9a;
+}
+
+footer{
+    text-align: center;
+}
