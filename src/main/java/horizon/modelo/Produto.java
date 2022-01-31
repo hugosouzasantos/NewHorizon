@@ -1,9 +1,27 @@
-package Classes;
+package horizon.modelo;
 
 public class Produto {
-	private String nome, plataforma, jogo, tipo, raridade, imagem, descricao, codProduto;
-	private int  quantidade;
-	private float preco;
+	
+    private String nome;
+    private String plataforma;
+    private String jogo;
+    private String tipo;
+    private String raridade;
+    private String descricao;
+    private int  quantidade;
+    private float preco;
+	public Produto(String nome, String plataforma, String jogo, String tipo, String raridade, String descricao,
+			int quantidade, float preco) {
+		super();
+		this.nome = nome;
+		this.plataforma = plataforma;
+		this.jogo = jogo;
+		this.tipo = tipo;
+		this.raridade = raridade;
+		this.descricao = descricao;
+		this.quantidade = quantidade;
+		this.preco = preco;
+	}
 	public String getNome() {
 		return nome;
 	}
@@ -34,23 +52,11 @@ public class Produto {
 	public void setRaridade(String raridade) {
 		this.raridade = raridade;
 	}
-	public String getImagem() {
-		return imagem;
-	}
-	public void setImagem(String imagem) {
-		this.imagem = imagem;
-	}
 	public String getDescricao() {
 		return descricao;
 	}
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
-	}
-	public String getCodProduto() {
-		return codProduto;
-	}
-	public void setCodProduto(String codProduto) {
-		this.codProduto = codProduto;
 	}
 	public int getQuantidade() {
 		return quantidade;
@@ -64,23 +70,7 @@ public class Produto {
 	public void setPreco(float preco) {
 		this.preco = preco;
 	}
-	public Produto(String nome, String plataforma, String jogo, String tipo, String raridade, String imagem,
-			String descricao, String codProduto, int quantidade, float preco) {
-		super();
-		this.nome = nome;
-		this.plataforma = plataforma;
-		this.jogo = jogo;
-		this.tipo = tipo;
-		this.raridade = raridade;
-		this.imagem = imagem;
-		this.descricao = descricao;
-		this.codProduto = codProduto;
-		this.quantidade = quantidade;
-		this.preco = preco;
-	}
-	
-	
-	
-	
-	
+    
+    
+
 }
