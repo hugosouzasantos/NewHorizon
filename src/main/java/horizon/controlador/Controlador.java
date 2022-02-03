@@ -97,7 +97,7 @@ public class Controlador extends HttpServlet{
 				confirmLoginVendedor(request, response);
 			}else if (action.equals("confirmLoginModerador")) {
 				confirmLoginModerador(request, response);
-			}else if (action.equals("logout")) {
+			}else if (action.equals("logout")) { //a
 				logout(request, response);
 			}else {				
 				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/front/vendedor/erroVendedor.jsp"); 
@@ -197,7 +197,7 @@ public class Controlador extends HttpServlet{
 		String sobreNome = request.getParameter("sobreNome");
 		String email = request.getParameter("email");
 		String tel = request.getParameter("tel");
-		String cpf = request.getParameter("cpf");
+		String cpf = request.getParameter("cpf"); //c
 		String rg = request.getParameter("rg");
 		String dtn = request.getParameter("dtn");
 		String senha = request.getParameter("senha");
@@ -297,7 +297,7 @@ public class Controlador extends HttpServlet{
 		
 	}
 
-	private void formAtualizarCliente(HttpServletRequest request, HttpServletResponse response)
+	private void formAtualizarCliente(HttpServletRequest request, HttpServletResponse response)//e
 			throws ServletException, IOException, DAOException {
 
 		int idCliente = Integer.valueOf(request.getParameter("idCliente"));
@@ -397,7 +397,7 @@ public class Controlador extends HttpServlet{
 	private void cadastrarProduto(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException, DAOException {
 		
-		String nome = request.getParameter("nome");
+		String nome = request.getParameter("nome"); //r
 		int quantidade = Integer.valueOf(request.getParameter("quantidade"));
 		String jogo = request.getParameter("jogo");
 		String tipo = request.getParameter("tipo");
@@ -448,7 +448,7 @@ public class Controlador extends HttpServlet{
 		String plataforma = request.getParameter("plataforma");
 		int idProduto = Integer.valueOf(request.getParameter("idProduto"));
 
-		Produto produtoAtualizado = new Produto(nome,  plataforma,  jogo,  tipo,  raridade,  descricao, quantidade,  preco,  idProduto);
+		Produto produtoAtualizado = new Produto(nome,  plataforma,  jogo,  tipo,  raridade,  descricao, quantidade,  preco,  idProduto);																																																																																							
 		DAOProduto dao = new DAOProdutoImpl();
 
 		Produto produto = dao.buscarProduto(idProduto);
@@ -497,7 +497,7 @@ public class Controlador extends HttpServlet{
 		
 		Moderador novoModerador = new Moderador(nome, senha, email, idModerador);
 
-		
+		//a
 		DAOModerador dao = new DAOModeradorImpl();
 		dao.cadastrar(novoModerador);
 
@@ -597,7 +597,7 @@ public class Controlador extends HttpServlet{
 		}
 		else {
 			String msgErro = "Você já está logado!";
-			session.setAttribute("msgErro", msgErro);
+			session.setAttribute("msgErro", msgErro); //c
 			((HttpServletResponse) response).sendRedirect("controlador?action=index");
 		}
 	}
