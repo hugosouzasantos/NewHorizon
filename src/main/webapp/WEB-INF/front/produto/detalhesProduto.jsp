@@ -61,15 +61,15 @@
 		</tr>
 		<tr>
 			<th><label for="descrição">Descrição:</label></th>
-			<td>${produto.descrição}</td>
+			<td>${produto.descricao}</td>
 		</tr>
 		<tr>
-			<th><label for="codproduto">Codigo do produto:</label></th>
-			<td>${produto.codproduto}</td>
+			<th><label for="idProduto">Codigo do produto:</label></th>
+			<td>${produto.idProduto}</td>
 		</tr>
 	</table>
 	<div style="text-align: center; padding-bottom: 3%">
-		<a href="controlador?action=gerenciarProdutos"><button
+		<a href="controlador?action=index"><button
 				type="button" class="btn btn-outline-primary">Pagina
 				inicial</button></a>
 	</div>

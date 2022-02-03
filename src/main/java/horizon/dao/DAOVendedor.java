@@ -1,8 +1,10 @@
 package horizon.dao;
 
+import java.util.List;
+
 import horizon.modelo.*;
 
-public class DAOVendedor {
+public interface DAOVendedor {
 	
 	public void cadastrar(Vendedor vendedor) throws DAOException;
 
@@ -12,6 +14,6 @@ public class DAOVendedor {
 
 	public List<Vendedor> todosVendedors() throws DAOException;
 
-	public liente buscarVendedor(Long id) throws DAOException;
+	public Vendedor buscarVendedor(int idVendedor) throws DAOException;
 
 }

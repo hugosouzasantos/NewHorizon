@@ -71,6 +71,10 @@
 					<option value="microsoftstore">Microsoft Store</option>
 					<option value="battenet">Battle Net</option>
 				</select>
+			</div>			
+			<div class="mb-3">
+				<label class="form-label" for="idVendedor">Codigo do Vendedor</label> <input type="text"
+					class="form-control" id="idVendedor" name="idVendedor" value="${vendedor.idVendedor}">
 			</div>
 			<div Style="padding-left: 85.5%; margin-top: 5%;">
 				<button type="submit" class="btn btn-outline-success">Atualizar</button>
@@ -78,7 +82,7 @@
 		</form>
 	</div>
 	<div style="text-align: center; padding-bottom: 3%">
-		<a href="controlador?action=gerenciarVendedores"><button type="button"
+		<a href="controlador?action=index"><button type="button"
 				class="btn btn-outline-primary">Pagina inicial</button></a>
 	</div>
 

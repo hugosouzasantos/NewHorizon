@@ -22,7 +22,7 @@
 		Style="margin-top: 20%; background-color: #dc3545; padding:; height: 15%; box-shadow: 0px 2px 2px #dc3545; text-align: center; font-size: 20px; color: black;">
 		<b style="font-size: 40px;">Produto não encontrado!</b></div>
 	<div style="text-align: center; padding-bottom: 3%; margin-top: 20%;">
-		<a href="controlador?action=gerenciarProdutos"><button type="button"
+		<a href="controlador?action=index"><button type="button"
 				class="btn btn-danger" style="color: black;">Pagina inicial</button></a>
 	</div>
 </body>

@@ -53,13 +53,17 @@
 				<label class="form-label">Senha</label> <input type="text"
 					class="form-control" name="senha" value="${cliente.senha}">
 			</div>
+			<div class="mb-3">
+				<label class="form-label">Id do Cliente</label> <input type="text"
+					class="form-control" name="idCliente" value="${cliente.idCliente}">
+			</div>
 			<div Style="padding-left: 85.5%; margin-top: 5%;">
 				<button type="submit" class="btn btn-outline-success">Atualizar</button>
 			</div>
 		</form>
 	</div>
 	<div style="text-align: center; padding-bottom: 3%">
-		<a href="controlador?action=gerenciarClientes"><button type="button"
+		<a href="controlador?action=index"><button type="button"
 				class="btn btn-outline-primary">Pagina inicial</button></a>
 	</div>
 	

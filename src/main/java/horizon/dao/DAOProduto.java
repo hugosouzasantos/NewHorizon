@@ -1,8 +1,10 @@
 package horizon.dao;
 
+import java.util.List;
+
 import horizon.modelo.*;
 
-public class DAOProduto {
+public interface DAOProduto {
 	
 	public void cadastrar(Produto produto) throws DAOException;
 
@@ -12,6 +14,6 @@ public class DAOProduto {
 
 	public List<Produto> todosProdutos() throws DAOException;
 
-	public liente buscarProduto(Long id) throws DAOException;
+	public Produto buscarProduto(int id) throws DAOException;
 
 }

@@ -34,8 +34,8 @@
 			</div>
 			<div class="mb-3">
 				<label class="form-label">Tipo do produto</label><br> <select
-					name="ppv" class="form-select">
-					<option selected>Plataforma</option>
+					name="tipo" class="form-select">
+					<option selected>Tipo</option>
 					<option value="cospago">Cosmético Pago</option>
 					<option value="cosgratis">Cosmético Gratuito</option>
 					<option value="gemaruna">Gema/Runa</option>
@@ -48,8 +48,8 @@
 			</div>
 			<div class="mb-3">
 				<label class="form-label">Raridade</label><br> <select
-					name="ppv" class="form-select">
-					<option selected>Plataforma</option>
+					name="raridade" class="form-select">
+					<option selected>Raridade</option>
 					<option value="comum">Comum</option>
 					<option value="incomum">Incomum</option>
 					<option value="raro">Raro</option>
@@ -68,16 +68,12 @@
 				<label class="form-label" for="descricao">Descrição</label> <input type="text"
 					class="form-control" id="descricacao" name="descricao">
 			</div>
-			<div class="mb-3">
-				<label class="form-label" for="codproduto">Codigo do produto</label> <input type="text"
-					class="form-control" id="codprouto" name="codproduto">
-			</div>
   
   <div Style="padding-left: 85.5%; margin-top: 5%;"><button type="submit" class="btn btn-outline-success">Cadastrar</button></div>
 
 </form>
 </div>
- <div style=" text-align: center; padding-bottom: 3%"><a href="controlador?action=gerenciarProduto"><button type="button" class="btn btn-outline-primary">Página inicial</button></a></div>
+ <div style=" text-align: center; padding-bottom: 3%"><a href="controlador?action=index"><button type="button" class="btn btn-outline-primary">Página inicial</button></a></div>
 </body>
 
 </html>

@@ -61,7 +61,7 @@
 		</tr>
 	</table>
 	<div style="text-align: center; padding-bottom: 3%">
-		<a href="controlador?action=gerenciarClientes"><button type="button" class="btn btn-outline-primary">Pagina inicial</button></a>
+		<a href="controlador?action=index"><button type="button" class="btn btn-outline-primary">Pagina inicial</button></a>
 	</div>
 </body>
 </html>

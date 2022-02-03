@@ -9,9 +9,8 @@ public class Cliente {
     private String cpf;
     private String dtn;
     private String senha;
-    private String nomeFile;
-	public Cliente(String nome, String sobreNome, String email, String tel, String cpf, String dtn, String senha,
-			String nomeFile) {
+    private int idCliente;
+	public Cliente(String nome, String sobreNome, String email, String tel, String cpf, String dtn, String senha, int idCliente) {
 		super();
 		this.nome = nome;
 		this.sobreNome = sobreNome;
@@ -20,7 +19,7 @@ public class Cliente {
 		this.cpf = cpf;
 		this.dtn = dtn;
 		this.senha = senha;
-		this.nomeFile = nomeFile;
+		this.idCliente = idCliente;
 	}
 	public String getNome() {
 		return nome;
@@ -64,11 +63,11 @@ public class Cliente {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	public String getNomeFile() {
-		return nomeFile;
+	public void setIdCliente(int idCliente) {
+		this.idCliente = idCliente;
 	}
-	public void setNomeFile(String nomeFile) {
-		this.nomeFile = nomeFile;
+	public int getIdCliente() {
+		return idCliente;
 	}
     
     

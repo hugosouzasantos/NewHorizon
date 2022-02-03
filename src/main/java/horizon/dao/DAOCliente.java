@@ -4,7 +4,7 @@ import horizon.modelo.*;
 
 import java.util.List;
 
-public class DAOCliente {
+public interface DAOCliente {
 	
 	public void cadastrar(Cliente cliente) throws DAOException;
 
@@ -14,6 +14,6 @@ public class DAOCliente {
 
 	public List<Cliente> todosClientes() throws DAOException;
 
-	public liente buscarCliente(Long id) throws DAOException;
+	public Cliente buscarCliente(int idCliente) throws DAOException;
 
 }

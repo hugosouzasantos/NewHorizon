@@ -72,12 +72,12 @@
             <option value="battleNet">Battle Net</option>
         </select>
   </div>
-  
+    
   <div Style="padding-left: 85.5%; margin-top: 5%;"><button type="submit" class="btn btn-outline-success">Cadastrar</button></div>
 
 </form>
 </div>
- <div style=" text-align: center; padding-bottom: 3%"><a href="controlador?action=gerenciarVendedores"><button type="button" class="btn btn-outline-primary">Página inicial</button></a></div>
+ <div style=" text-align: center; padding-bottom: 3%"><a href="controlador?action=index"><button type="button" class="btn btn-outline-primary">Página inicial</button></a></div>
 </body>
 
 </html>

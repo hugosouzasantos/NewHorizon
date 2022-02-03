@@ -1,4 +1,4 @@
-package horizon.filter;
+/*package horizon.filter;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -75,3 +75,4 @@ public class FiltrarUsuarios implements Filter {
 
 
 }
+*/

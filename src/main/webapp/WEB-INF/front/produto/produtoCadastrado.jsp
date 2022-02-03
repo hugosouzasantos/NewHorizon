@@ -27,7 +27,7 @@
 		crossorigin="anonymous"></script>
 	<div
 		Style="background-color: #69d1ce; padding: 2%; height: 5%; box-shadow: 0px 2px 2px #488a88;">
-		<h2 Style="text-align: center;">Os Dados do Produto ${produto.nome} Foram Atualizados.</h2>
+		<h2 Style="text-align: center;">Os Dados do produto ${produto.nome} foram cadastrados.</h2>
 	</div>
 	<table class="table table-striped"
 		style="width: 50%; margin-left: 25%; margin-right: 25%; margin-top: 3%;">
@@ -64,12 +64,12 @@
 			<td>${produto.descricao}</td>
 		</tr>
 		<tr>
-			<th><label for="codproduto">Codigo do produto:</label></th>
-			<td>${produto.codproduto}</td>
+			<th><label for="idProduto">Codigo do produto:</label></th>
+			<td>${produto.idProduto}</td>
 		</tr>
 	</table>
 	<div style="text-align: center; padding-bottom: 3%">
-		<a href="controlador?action=gerenciarProdutoes"><button
+		<a href="controlador?action=index"><button
 				type="button" class="btn btn-outline-primary">Pagina
 				inicial</button></a>
 	</div>

@@ -43,7 +43,7 @@
 			</div>
 			<div class="mb-3">
 				<label class="form-label">Tipo do produto</label><br> <select
-					name="ppv" class="form-select">
+					name="tipo" class="form-select">
 					<option selected value="${produto.tipo}">${produto.tipo}</option>
 					<option value="cospago">Cosmético Pago</option>
 					<option value="cosgratis">Cosmético Gratuito</option>
@@ -57,7 +57,7 @@
 			</div>
 			<div class="mb-3">
 				<label class="form-label">Raridade</label><br> <select
-					name="ppv" class="form-select">
+					name="raridade" class="form-select">
 					<option selected value="${produto.raridade}">${produto.raridade}</option>
 					<option value="comum">Comum</option>
 					<option value="incomum">Incomum</option>
@@ -79,7 +79,7 @@
 			</div>
 			<div class="mb-3">
 				<label class="form-label">Codigo do produto</label> <input type="text"
-					class="form-control" name="codproduto" value="${produto.codproduto}">
+					class="form-control" name="idProduto" value="${produto.idProduto}">
 			</div>
 			<div Style="padding-left: 85.5%; margin-top: 5%;">
 				<button type="submit" class="btn btn-outline-success">Atualizar</button>
@@ -87,7 +87,7 @@
 		</form>
 	</div>
 	<div style="text-align: center; padding-bottom: 3%">
-		<a href="controlador?action=gerenciarProduto"><button type="button"
+		<a href="controlador?action=index"><button type="button"
 				class="btn btn-outline-primary">Pagina inicial</button></a>
 	</div>
 

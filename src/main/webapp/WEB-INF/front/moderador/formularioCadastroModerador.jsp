@@ -34,7 +34,7 @@
 
 </form>
 </div>
- <div style=" text-align: center; padding-bottom: 3%"><a href="controlador?action=index"><button type="button" class="btn btn-outline-primary">PÃ¡gina inicial</button></a></div>
+ <div style=" text-align: center; padding-bottom: 3%"><a href="controlador?action=index"><button type="button" class="btn btn-outline-primary">Página inicial</button></a></div>
 </body>
 
 </html>
