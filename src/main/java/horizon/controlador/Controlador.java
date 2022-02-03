@@ -9,6 +9,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import horizon.dao.*;
 
 import horizon.modelo.*;
@@ -30,7 +32,7 @@ public class Controlador extends HttpServlet{
 		String action = request.getParameter("action");
 
 		if (action == null)
-			action = "gerenciarVendedors";
+			action = "index";
 		
 		try {
 			if (action.equals("gerenciarVendedores")) {
@@ -95,6 +97,8 @@ public class Controlador extends HttpServlet{
 				confirmLoginVendedor(request, response);
 			}else if (action.equals("confirmLoginModerador")) {
 				confirmLoginModerador(request, response);
+			}else if (action.equals("logout")) {
+				logout(request, response);
 			}else {				
 				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/front/vendedor/erroVendedor.jsp"); 
 				rd.forward(request, response);
@@ -231,8 +235,7 @@ public class Controlador extends HttpServlet{
 		} else {
 			request.setAttribute("msg", "O vendedor não está cadastrado!");
 		}
-		RequestDispatcher rd = request.getRequestDispatcher("controlador?action=gerenciarVendedores");
-		rd.forward(request, response);
+		gerenciarVendedores(request,response);
 	}
 	
 
@@ -353,8 +356,7 @@ public class Controlador extends HttpServlet{
 		} else {
 			request.setAttribute("msg", "O cliente não está cadastrado!");
 		}
-		RequestDispatcher rd = request.getRequestDispatcher("controlador?action=gerenciarClientes");
-		rd.forward(request, response);
+		gerenciarClientes(request,response);
 	}	
 	
 	private void gerenciarProdutos(HttpServletRequest request, HttpServletResponse response)
@@ -476,8 +478,7 @@ public class Controlador extends HttpServlet{
 		} else {
 			request.setAttribute("msg", "O produto não está cadastrado!");
 		}
-		RequestDispatcher rd = request.getRequestDispatcher("controlador?action=gerenciarProdutos");
-		rd.forward(request, response);
+		gerenciarProdutos(request,response);
 	}	
 	
 	private void formCadastrarModerador(HttpServletRequest request, HttpServletResponse response)
@@ -528,16 +529,19 @@ public class Controlador extends HttpServlet{
 		
 		DAOCliente dao = new DAOClienteImpl();
 		List<Cliente> clientes = dao.todosClientes();
+		HttpSession session = request.getSession(true);
 		
 		for(int i = 0; i < clientes.size(); i++)
 		{
 			if((clientes.get(i).getSenha()).equals(request.getParameter("senhaCliente")) && (clientes.get(i).getEmail()).equals(request.getParameter("usuarioCliente"))) {
-				RequestDispatcher rd = request.getRequestDispatcher("controlador?action=verProdutos");
-				rd.forward(request, response);
+				session.setAttribute("usuario", "cliente");	
+				verProdutos(request,response);
 			}
 		}
-		RequestDispatcher rd = request.getRequestDispatcher("controlador?action=index");
-		rd.forward(request, response);
+		
+		String msgErro = "Senha e/ou usuario incorretos!";
+		session.setAttribute("msgErro", msgErro);
+		((HttpServletResponse) response).sendRedirect("controlador?action=index");
 		
 	}
 	private void confirmLoginVendedor(HttpServletRequest request, HttpServletResponse response)
@@ -545,16 +549,20 @@ public class Controlador extends HttpServlet{
 		
 		DAOVendedor dao = new DAOVendedorImpl();
 		List<Vendedor> vendedores = dao.todosVendedors();
+		HttpSession session = request.getSession(true);
+		
 		
 		for(int i = 0; i < vendedores.size(); i++)
 		{			
 			if((vendedores.get(i).getSenha()).equals(request.getParameter("senhaVendedor")) && (vendedores.get(i).getEmail()).equals(request.getParameter("usuarioVendedor"))) {
-				RequestDispatcher rd = request.getRequestDispatcher("controlador?action=verProdutos");
-				rd.forward(request, response);
+				session.setAttribute("usuario","vendedor");				
+				verProdutos(request,response);
 			}
 		}
-		RequestDispatcher rd = request.getRequestDispatcher("controlador?action=index");
-		rd.forward(request, response);
+		
+		String msgErro = "Senha e/ou usuario incorretos!";
+		session.setAttribute("msgErro", msgErro);
+		((HttpServletResponse) response).sendRedirect("controlador?action=index");
 		
 	}
 	private void confirmLoginModerador(HttpServletRequest request, HttpServletResponse response)
@@ -562,32 +570,70 @@ public class Controlador extends HttpServlet{
 		
 		DAOModerador dao = new DAOModeradorImpl();
 		List<Moderador> moderadores = dao.todosModeradors();
+		HttpSession session = request.getSession(true);
 		
 		for(int i = 0; i < moderadores.size(); i++)
 		{
 			if((moderadores.get(i).getSenha()).equals(request.getParameter("senhaModerador")) && (moderadores.get(i).getEmail()).equals(request.getParameter("usuarioModerador"))) {
-				RequestDispatcher rd = request.getRequestDispatcher("controlador?action=verProdutos");
-				rd.forward(request, response);
+				session.setAttribute("usuario", "moderador");
+				verProdutos(request,response);
 			}
 		}
-		RequestDispatcher rd = request.getRequestDispatcher("controlador?action=index");
-		rd.forward(request, response);
+		
+		String msgErro = "Senha e/ou usuario incorretos!";
+		session.setAttribute("msgErro", msgErro);
+		((HttpServletResponse) response).sendRedirect("controlador?action=index");
 		
 	}
+	
+	
 	private void loginModerador(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/front/moderador/loginModerador.jsp");
-		rd.forward(request, response);
+		HttpSession session = request.getSession(true);
+		String usuario = (String) session.getAttribute("usuario");
+		if(usuario == null) {
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/front/moderador/loginModerador.jsp");
+			rd.forward(request, response);
+		}
+		else {
+			String msgErro = "Você já está logado!";
+			session.setAttribute("msgErro", msgErro);
+			((HttpServletResponse) response).sendRedirect("controlador?action=index");
+		}
 	}
 	private void loginVendedor(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/front/vendedor/loginVendedor.jsp");
-		rd.forward(request, response);
+		HttpSession session = request.getSession(true);
+		String usuario = (String) session.getAttribute("usuario");
+		if(usuario == null) {
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/front/vendedor/loginVendedor.jsp");
+			rd.forward(request, response);
+		}
+		else {
+			String msgErro = "Você já está logado!";
+			session.setAttribute("msgErro", msgErro);
+			((HttpServletResponse) response).sendRedirect("controlador?action=index");
+		}
 	}
 	private void loginCliente(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/front/cliente/loginCliente.jsp");
-		rd.forward(request, response);
+		HttpSession session = request.getSession(true);
+		String usuario = (String) session.getAttribute("usuario");
+		if(usuario == null) {
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/front/cliente/loginCliente.jsp");
+			rd.forward(request, response);
+		}
+		else {
+			String msgErro = "Você já está logado!";
+			session.setAttribute("msgErro", msgErro);
+			((HttpServletResponse) response).sendRedirect("controlador?action=index");
+		}
+	}
+	
+	private void logout(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HttpSession session = request.getSession();
+		session.invalidate();
+		index(request,response);
 	}
 
 }

@@ -15,7 +15,8 @@
 <div Style="background-color: #69d1ce; padding: 2%; height: 5%; box-shadow: 0px 2px 2px #488a88;"><h2 Style="text-align: center;">Login Moderador</h2></div>
 <div Style="margin-left: 20%; margin-right: 20%; width: 60%; margin-bottom: 2%; border-style: solid #488a88; border-radius: 5px; background-color: #eee; margin-top: 5%;">
 <form action="controlador?action=confirmLoginModerador" method="post" Style="padding-left: 5%; padding-right: 5%; padding-top: 2%; padding-bottom: 2%;">
-
+  
+  <input type="hidden" name="usuario" value="moderador">
   <div class="mb-3">
                 <label class="form-label" for="usuarioModerador">Usuario</label> <input type="text"
                     class="form-control" id="usuarioModerador" name="usuarioModerador" placeholder="email">

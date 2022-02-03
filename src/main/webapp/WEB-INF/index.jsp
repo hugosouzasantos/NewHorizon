@@ -102,21 +102,31 @@ body {
     justify-content: center;
     padding: 15px;
     padding-top: 30px;;
+    color: #fff;
 }
 
 .footer-escrito {
     font-weight: 400;
+    color: #fff;
 }</style>
 
 	</head>
   	<body>
+	  	
   	
         <header class="header"> 
             <a class="header-logo" href="index.html"> New Horizon </a>
             <nav class="header-nav">
-                <a class="header-nav-item" href="#"> Sobre nós </a>
-                <a class="header-nav-item" href="#"> Fale conosco </a>
+                <a class="header-nav-item" href=""> Sobre nós </a>
+                <a class="header-nav-item" href=""> Fale conosco </a>
+                <a class="header-nav-item" href="controlador?action=logout"  onclick="deslogar()"> Logout </a>
             </nav>
+            <script>
+				function deslogar()
+				{
+				alert("Você foi deslogado!");
+				}
+			</script>
         </header>
         
         <main class="main"> 
@@ -158,7 +168,7 @@ body {
         </main>
         
         <footer class="footer">
-            <h5 class="footer-escrito"> Trabalho PWII </h4>
+            <h5 class="footer-escrito"> ${msgErro} </h5>
         </footer>
     </body>
 </html> 

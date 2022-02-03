@@ -28,7 +28,7 @@ public class Vendedor {
 		this.ppv = ppv;
 		this.idVendedor = idVendedor;
 	}
-
+	
 	public String getNome() {
 		return nome;
 	}

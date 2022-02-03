@@ -18,7 +18,30 @@
   <body >
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-    <div Style="background-color: #69d1ce; padding: 2%; height: 5%; box-shadow: 0px 2px 2px #488a88;"><h2 Style="text-align: center;">Gerenciar Clientes</h2></div>
+    <nav class="navbar navbar-expand-lg navbar-light" Style="background-color: #69d1ce;">
+      <div class="container-fluid">
+              <h3>Área do moderador</h3>
+            &nbsp; &nbsp;
+        <b><div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="controlador?action=index">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="controlador?action=gerenciarClientes">Gerenciar clientes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="controlador?action=gerenciarProdutos">Gerenciar Produtos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="controlador?action=gerenciarVendedores">Gerenciar Vendedores</a>
+            </li>
+          </ul>
+        </div></b>
+        &nbsp; &nbsp;
+        <h4>Gerenciar Clientes</h4>        
+      </div>
+    </nav>
      <div style=" margin-bottom: 1%; margin-left: 78%; margin-top: 5%"><a href="controlador?action=formCadastrarCliente"><button type="button" class="btn btn-outline-success">Cadastrar novo Cliente</button></a></div>
         <div Style="margin-left: 10%; margin-right: 10%; width: 80%; margin-bottom: 5%; border-style: solid #488a88; border-radius: 5px; background-color: #eee; text-align: center;"> 
         <table class="table table-hover">

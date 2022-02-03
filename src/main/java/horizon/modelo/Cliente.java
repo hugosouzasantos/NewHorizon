@@ -10,6 +10,7 @@ public class Cliente {
     private String dtn;
     private String senha;
     private int idCliente;
+    
 	public Cliente(String nome, String sobreNome, String email, String tel, String cpf, String dtn, String senha, int idCliente) {
 		super();
 		this.nome = nome;
